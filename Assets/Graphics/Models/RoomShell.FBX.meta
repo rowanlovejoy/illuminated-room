@@ -10,8 +10,8 @@ ModelImporter:
     400002: //RootNode
     400004: RoomShell
     2100000: 'Material #54'
-    2100002: 'Material #55'
-    2100004: 'Material #56'
+    2100002: 'Material #58'
+    2100004: 'Material #55'
     2100006: 'Material #40'
     2100008: 'Material #38'
     2100010: 'Material #39'
@@ -70,9 +70,9 @@ ModelImporter:
     preserveHierarchy: 0
     indexFormat: 0
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15
+    secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
-    secondaryUVPackMargin: 32
+    secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
