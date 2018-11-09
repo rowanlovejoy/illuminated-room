@@ -4,7 +4,7 @@ using UnityEngine;
 
 /*
  * The code in this script is based on a publically available YouTube tutorial produced by user Acacia Developer (2018)
- * For the full reference to this source, along with others used for this Design Challenge 01, see Documentation\Design Challenge 01\3rd Party Assets\Design Challenge 01 Reference List.pdf
+ * For the full reference to this source, along with others used for this Design Challenge 02, see Documentation\Design Challenge 02\Sources\Design Challenge 02 Reference List.pdf
  * */
 
 public class PlayerMove : MonoBehaviour
@@ -12,8 +12,8 @@ public class PlayerMove : MonoBehaviour
     private CharacterController m_charController; // Reference to the player character's CharacterController component
 
     [SerializeField]
-    private float m_movementSpeed = 10.0f; // Controls how quickly the player moves in a direction
-
+    private float m_movementSpeed = 3.0f; // Controls how quickly the player moves in a direction
+    [SerializeField]
     private string m_movementSound;
 
     private void Awake()
@@ -21,7 +21,6 @@ public class PlayerMove : MonoBehaviour
         m_charController = GetComponent<CharacterController>(); // Gets and stores a reference to the player character's CharacterController component
     }
 
-    
     private void Update()
     {
         PlayerMovement();

@@ -5,24 +5,40 @@ using UnityEngine;
 public class PlayerInteract : MonoBehaviour
 {
     [SerializeField]
-    float m_sphereRad = 10.0f;
-    [SerializeField]
-    float m_maxInteractDist = 50.0f;
+    float m_maxInteractDist = 2f;
     [SerializeField]
     LayerMask m_interactLayers;
 
-    RaycastHit m_hit;
+    CharacterController m_charCtrl;
+
+    private void Awake()
+    {
+        m_charCtrl = GetComponent<CharacterController>();
+    }
 
     private void Update()
     {
         if (Input.GetButtonDown("Interact"))
         {
-            if (Physics.SphereCast(gameObject.transform.position, m_sphereRad, transform.forward, out m_hit, m_interactLayers))
-            {
-                Debug.Log("Hit");
-            }
+            Debug.Log("Interact command received.");
 
-            // Check contents of hit, use interface to interact
+            RaycastHit m_hit;
+
+            Vector3 m_pos = transform.position;
+
+            if (Physics.SphereCast(m_pos, m_charCtrl.height / 2, transform.forward, out m_hit, m_maxInteractDist, m_interactLayers))
+            {
+                Debug.Log("Hit!");
+
+                MonoBehaviour _hitObject = m_hit.collider.gameObject.GetComponent<MonoBehaviour>();
+
+                if (_hitObject is IInteractable)
+                {
+                    IInteractable _interactiveObject = (IInteractable)_hitObject;
+                    _interactiveObject.Interact();
+                }
+            }
+ 
         }
     }
 }

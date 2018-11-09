@@ -4,7 +4,7 @@ using UnityEngine;
 
 /*
  * The code in this script is based on a publically available YouTube tutorial produced by user Acacia Developer (2018)
- * For the full reference to this source, along with others used for this Design Challenge 01, see Documentation\Design Challenge 01\3rd Party Assets\Design Challenge 01 Reference List.pdf
+ * For the full reference to this source, along with others used for this Design Challenge 02, see Documentation\Design Challenge 02\Sources\Design Challenge 02 Reference List.pdf
  * */
 
 public class PlayerLook : MonoBehaviour
@@ -66,9 +66,8 @@ public class PlayerLook : MonoBehaviour
     // Clamps the rotation on the x axis, preventing the the player from rotating 360 degrees on that axis
     private void ClampXAxisRotationToValue(float _value)
     {
-        Vector3 _eulerRoation = -transform.eulerAngles;
+        Vector3 _eulerRoation = transform.eulerAngles;
         _eulerRoation.x = _value;
         transform.eulerAngles = _eulerRoation;
     }
-
 }

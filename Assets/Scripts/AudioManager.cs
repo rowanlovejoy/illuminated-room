@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 
 /*
  * The code in this script is based on a publically available YouTube tutorial produced by user Brackeys (2017)
- * For the full reference to this source, along with others used for this Design Challenge 01, see Documentation\Design Challenge 01\3rd Party Assets\Design Challenge 01 Reference List.pdf
+ * For the full reference to this source, along with others used for this Design Challenge 02, see Documentation\Design Challenge 02\Sources\Design Challenge 02 Reference List.pdf
  * */
 
 public class AudioManager : MonoBehaviour
